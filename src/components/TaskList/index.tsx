@@ -51,8 +51,8 @@ export const TaskList: FC = () => {
         </Button>
       </div>
       <div>
-        {taskRecords.map((tsk) => (
-          <TaskCard task={tsk} />
+        {taskRecords.map((tsk, index) => (
+          <TaskCard task={tsk} key={index} />
         ))}
       </div>
 

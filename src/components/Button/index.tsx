@@ -9,7 +9,11 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 export const Button: FC<IProps> = (props) => {
   return (
-    <ButtonContainer $bgColor={props.bgColor} disabled={props.isDisabled} />
+    <ButtonContainer
+      {...props}
+      $bgColor={props.bgColor}
+      disabled={props.isDisabled}
+    />
   );
 };
 
